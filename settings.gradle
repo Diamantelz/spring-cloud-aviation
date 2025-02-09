@@ -1,0 +1,6 @@
+rootProject.name = 'spring-cloud-aviation'
+
+includeBuild 'eureka-server'
+includeBuild 'api-gateway'
+includeBuild 'flight-booking-service'
+includeBuild 'flight-availability-service'
