@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_package = "ru.itis.baggage.service";
+option java_multiple_files = true;
+
+service BaggageService {
+  rpc getUsersBaggageById(UserRequest) returns (UserResponse) {}
+  rpc addBaggage(AddBaggageRequest) returns (AddBaggageResponse) {}
+}
+
+message UserRequest {
+  int32 id = 1;
+}
+
+message UserResponse {
+  repeated string events = 1;
+}
+
+message AddBaggageRequest {
+  int32 user_id = 1;
+  string baggage_item = 2;
+}
+
+message AddBaggageResponse {}
