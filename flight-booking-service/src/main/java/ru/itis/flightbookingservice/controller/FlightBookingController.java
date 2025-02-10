@@ -33,7 +33,7 @@ public class FlightBookingController {
         Map<String, String> bookingStatus = bookingStatusCache.getIfPresent(flightNumber);
         if (bookingStatus == null) {
             bookingStatus = new HashMap<>();
-            bookingStatus.put("message", "Бронирование с номером " + flightNumber + "свободно.");
+            bookingStatus.put("message", "Бронирование с номером " + flightNumber + " свободно.");
         }
         return new ResponseEntity<>(bookingStatus, HttpStatus.OK);
     }
